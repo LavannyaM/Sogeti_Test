@@ -1,0 +1,1710 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Extent report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Final Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Aug 7, 2023 04:00:02 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>6</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Launch Browser and verify Success : TestCase 01</span>
+						<span class='test-time'>Aug 7, 2023 04:00:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:00:04 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:00:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+269ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:24 PM</td>
+				<td class='step-details'>
+						Navigated to the specified URL and Page Loaded sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:37 PM</td>
+				<td class='step-details'>
+						Navigated to Automation Link and Page Loaded sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:37 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>TestCase01 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png' src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png' data-src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\TabSelection.png' src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\TabSelection.png' data-src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\TabSelection.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Complete Contach Us Form and verify Success : TestCase 02</span>
+						<span class='test-time'>Aug 7, 2023 04:00:37 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:00:37 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:00:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+154ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:39 PM</td>
+				<td class='step-details'>
+						Navigated to the specified URL and Page Loaded sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:00:44 PM</td>
+				<td class='step-details'>
+						Form Submission Failed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:44 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>TestCase02 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png' src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png' data-src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Homepage.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\FormError.png' src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\FormError.png' data-src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\FormError.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>To Validate Country Specific Sogeti LinksTestCase 03</span>
+						<span class='test-time'>Aug 7, 2023 04:00:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:00:44 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:01:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+720ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:46 PM</td>
+				<td class='step-details'>
+						Navigated to the specified URL and Page Loaded sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:46 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.be/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:47 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.fi/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:49 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.fr.sogeti.com/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:50 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.de/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:00:51 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.ie/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:00 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.lu/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:00 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.nl/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:02 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.no/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:03 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.es/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:04 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.sogeti.se/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:05 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.uk.sogeti.com/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:06 PM</td>
+				<td class='step-details'>
+						Validated the URL: https://www.us.sogeti.com/ - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:06 PM</td>
+				<td class='step-details'>
+						URL in Country List is Validated Sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:06 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>TestCase03 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Worldwide.png' src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Worldwide.png' data-src='C:\Users\lavan\eclipse-workspace\Sogeti_TAProject\Results\2023-08-07\16_00_02\Worldwide.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Launch Browser and verify Success : API_TestCase 01</span>
+						<span class='test-time'>Aug 7, 2023 04:01:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:01:06 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:01:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+827ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:08 PM</td>
+				<td class='step-details'>
+						Response Header : 
+Date=Mon, 07 Aug 2023 10:31:09 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+x-cache=hit
+charset=UTF-8
+vary=Accept-Encoding
+CF-Cache-Status=DYNAMIC
+Report-To={"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oXa0BofVpCp4NzVf1zD1dqO3c58nM9WIxEs79JT4naI6Babte1agcXKFXx%2BROTHSqIpa3splbI5WnSBelQMoMRfjxWSzSGxR6BzqNkLlksSWNnN60ymquzZMEIya4YGrNftJxw%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL={"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+access-control-allow-origin=*
+Server=cloudflare
+CF-RAY=7f2ed92828aa3b31-BOM
+Content-Encoding=gzip
+alt-svc=h3=":443"; ma=86400
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:08 PM</td>
+				<td class='step-details'>
+						Response Body : 
+{
+    "country abbreviation": "DE",
+    "places": [
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1767",
+            "post code": "70173",
+            "latitude": "48.7786"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70173",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70174",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.172",
+            "post code": "70174",
+            "latitude": "48.7827"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Nord",
+            "longitude": "9.1921",
+            "post code": "70174",
+            "latitude": "48.7978"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70176",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1585",
+            "post code": "70176",
+            "latitude": "48.7752"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-West",
+            "longitude": "9.1641",
+            "post code": "70176",
+            "latitude": "48.7736"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-West",
+            "longitude": "9.1641",
+            "post code": "70178",
+            "latitude": "48.7736"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1731",
+            "post code": "70178",
+            "latitude": "48.7728"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70178",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Süd",
+            "longitude": "9.1678",
+            "post code": "70178",
+            "latitude": "48.7644"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70180",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1762",
+            "post code": "70180",
+            "latitude": "48.7649"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Süd",
+            "longitude": "9.1678",
+            "post code": "70180",
+            "latitude": "48.7644"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70182",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1821",
+            "post code": "70182",
+            "latitude": "48.7745"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70184",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Frauenkopf",
+            "longitude": "9.2218",
+            "post code": "70184",
+            "latitude": "48.7607"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Süd",
+            "longitude": "9.1678",
+            "post code": "70184",
+            "latitude": "48.7644"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Ost",
+            "longitude": "9.2079",
+            "post code": "70184",
+            "latitude": "48.7819"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.1798",
+            "post code": "70184",
+            "latitude": "48.7759"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70186",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Ost",
+            "longitude": "9.2042",
+            "post code": "70186",
+            "latitude": "48.7718"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70188",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.2112",
+            "post code": "70188",
+            "latitude": "48.7836"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Ost",
+            "longitude": "9.2079",
+            "post code": "70188",
+            "latitude": "48.7819"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Ost",
+            "longitude": "9.2079",
+            "post code": "70190",
+            "latitude": "48.7819"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70190",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Mitte",
+            "longitude": "9.2019",
+            "post code": "70190",
+            "latitude": "48.7887"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70191",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Bad Cannstatt",
+            "longitude": "9.2141",
+            "post code": "70191",
+            "latitude": "48.8056"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Nord",
+            "longitude": "9.1824",
+            "post code": "70191",
+            "latitude": "48.7974"
+        },
+        {
+            "place name": "Stuttgart Feuerbach",
+            "longitude": "9.1588",
+            "post code": "70192",
+            "latitude": "48.8113"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70192",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Nord",
+            "longitude": "9.1921",
+            "post code": "70192",
+            "latitude": "48.7978"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70193",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-West",
+            "longitude": "9.1641",
+            "post code": "70193",
+            "latitude": "48.7736"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Nord",
+            "longitude": "9.1557",
+            "post code": "70193",
+            "latitude": "48.7784"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70195",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Botnang",
+            "longitude": "9.1304",
+            "post code": "70195",
+            "latitude": "48.7762"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70197",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-West",
+            "longitude": "9.1485",
+            "post code": "70197",
+            "latitude": "48.767"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Süd",
+            "longitude": "9.1678",
+            "post code": "70199",
+            "latitude": "48.7644"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-West",
+            "longitude": "9.1509",
+            "post code": "70199",
+            "latitude": "48.7582"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70199",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Rotenberg",
+            "longitude": "9.2715",
+            "post code": "70327",
+            "latitude": "48.7833"
+        },
+        {
+            "place name": "Stuttgart Hedelfingen",
+            "longitude": "9.2557",
+            "post code": "70327",
+            "latitude": "48.7586"
+        },
+        {
+            "place name": "Stuttgart Luginsland",
+            "longitude": "9.2579",
+            "post code": "70327",
+            "latitude": "48.7931"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70327",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Wangen",
+            "longitude": "9.2478",
+            "post code": "70327",
+            "latitude": "48.7687"
+        },
+        {
+            "place name": "Stuttgart Stuttgart-Ost",
+            "longitude": "9.2444",
+            "post code": "70327",
+            "latitude": "48.7726"
+        },
+        {
+            "place name": "Stuttgart Untertürkheim",
+            "longitude": "9.2509",
+            "post code": "70327",
+            "latitude": "48.7802"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70329",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Uhlbach",
+            "longitude": "9.2788",
+            "post code": "70329",
+            "latitude": "48.7762"
+        },
+        {
+            "place name": "Stuttgart Rohracker",
+            "longitude": "9.2618",
+            "post code": "70329",
+            "latitude": "48.7618"
+        },
+        {
+            "place name": "Stuttgart Obertürkheim",
+            "longitude": "9.2683",
+            "post code": "70329",
+            "latitude": "48.7646"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.2177",
+            "post code": "70372",
+            "latitude": "48.8026"
+        },
+        {
+            "place name": "Stuttgart Bad Cannstatt",
+            "longitude": "9.2141",
+            "post code": "70372",
+            "latitude": "48.8056"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70374",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Bad Cannstatt",
+            "longitude": "9.2141",
+            "post code": "70374",
+            "latitude": "48.8056"
+        },
+        {
+            "place name": "Stuttgart Sommerrain",
+            "longitude": "9.2367",
+            "post code": "70374",
+            "latitude": "48.8106"
+        },
+        {
+            "place name": "Stuttgart Burgholzhof",
+            "longitude": "9.2124",
+            "post code": "70376",
+            "latitude": "48.8137"
+        },
+        {
+            "place name": "Stuttgart Münster",
+            "longitude": "9.22",
+            "post code": "70376",
+            "latitude": "48.8213"
+        },
+        {
+            "place name": "Stuttgart Bad Cannstatt",
+            "longitude": "9.2141",
+            "post code": "70376",
+            "latitude": "48.8056"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70376",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.227",
+            "post code": "70378",
+            "latitude": "48.837"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70435",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Zuffenhausen",
+            "longitude": "9.1656",
+            "post code": "70435",
+            "latitude": "48.8334"
+        },
+        {
+            "place name": "Stuttgart Zuffenhausen",
+            "longitude": "9.1938",
+            "post code": "70437",
+            "latitude": "48.8353"
+        },
+        {
+            "place name": "Stuttgart Rot",
+            "longitude": "9.1927",
+            "post code": "70437",
+            "latitude": "48.8341"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70437",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Mönchfeld",
+            "longitude": "9.2192",
+            "post code": "70437",
+            "latitude": "48.8424"
+        },
+        {
+            "place name": "Stuttgart Zazenhausen",
+            "longitude": "9.1928",
+            "post code": "70437",
+            "latitude": "48.8409"
+        },
+        {
+            "place name": "Stuttgart Freiberg",
+            "longitude": "9.2049",
+            "post code": "70437",
+            "latitude": "48.8363"
+        },
+        {
+            "place name": "Stuttgart Neuwirtshaus",
+            "longitude": "9.1424",
+            "post code": "70439",
+            "latitude": "48.8357"
+        },
+        {
+            "place name": "Stuttgart Zuffenhausen",
+            "longitude": "9.1525",
+            "post code": "70439",
+            "latitude": "48.8412"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70439",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Stammheim",
+            "longitude": "9.156",
+            "post code": "70439",
+            "latitude": "48.8493"
+        },
+        {
+            "place name": "Stuttgart Feuerbach",
+            "longitude": "9.1612",
+            "post code": "70469",
+            "latitude": "48.8098"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70469",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Zuffenhausen",
+            "longitude": "9.1675",
+            "post code": "70469",
+            "latitude": "48.8141"
+        },
+        {
+            "place name": "Stuttgart Giebel",
+            "longitude": "9.0891",
+            "post code": "70499",
+            "latitude": "48.8067"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70499",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Weilimdorf",
+            "longitude": "9.1123",
+            "post code": "70499",
+            "latitude": "48.8143"
+        },
+        {
+            "place name": "Stuttgart Hausen",
+            "longitude": "9.0829",
+            "post code": "70499",
+            "latitude": "48.8151"
+        },
+        {
+            "place name": "Stuttgart Wolfbusch",
+            "longitude": "9.1118",
+            "post code": "70499",
+            "latitude": "48.8125"
+        },
+        {
+            "place name": "Stuttgart Bergheim",
+            "longitude": "9.0897",
+            "post code": "70499",
+            "latitude": "48.8013"
+        },
+        {
+            "place name": "Stuttgart Zuffenhausen",
+            "longitude": "9.1685",
+            "post code": "70499",
+            "latitude": "48.8323"
+        },
+        {
+            "place name": "Stuttgart Möhringen",
+            "longitude": "9.1464",
+            "post code": "70563",
+            "latitude": "48.7258"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70563",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Vaihingen",
+            "longitude": "9.103",
+            "post code": "70563",
+            "latitude": "48.7294"
+        },
+        {
+            "place name": "Stuttgart Dürrlewang",
+            "longitude": "9.1181",
+            "post code": "70565",
+            "latitude": "48.7195"
+        },
+        {
+            "place name": "Stuttgart Fasanenhof",
+            "longitude": "9.1509",
+            "post code": "70565",
+            "latitude": "48.7124"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70565",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Möhringen",
+            "longitude": "9.1464",
+            "post code": "70565",
+            "latitude": "48.7258"
+        },
+        {
+            "place name": "Stuttgart Vaihingen",
+            "longitude": "9.1247",
+            "post code": "70565",
+            "latitude": "48.7248"
+        },
+        {
+            "place name": "Stuttgart Rohr",
+            "longitude": "9.106",
+            "post code": "70565",
+            "latitude": "48.7172"
+        },
+        {
+            "place name": "Stuttgart Möhringen",
+            "longitude": "9.1464",
+            "post code": "70567",
+            "latitude": "48.7258"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70567",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Degerloch",
+            "longitude": "9.1534",
+            "post code": "70567",
+            "latitude": "48.7237"
+        },
+        {
+            "place name": "Stuttgart Vaihingen",
+            "longitude": "9.1097",
+            "post code": "70569",
+            "latitude": "48.7301"
+        },
+        {
+            "place name": "Stuttgart Kaltental",
+            "longitude": "9.1293",
+            "post code": "70569",
+            "latitude": "48.7383"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70569",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Büsnau",
+            "longitude": "9.0798",
+            "post code": "70569",
+            "latitude": "48.7506"
+        },
+        {
+            "place name": "Stuttgart Degerloch",
+            "longitude": "9.1703",
+            "post code": "70597",
+            "latitude": "48.7496"
+        },
+        {
+            "place name": "Stuttgart Kaltental",
+            "longitude": "9.1293",
+            "post code": "70597",
+            "latitude": "48.7383"
+        },
+        {
+            "place name": "Stuttgart Hoffeld",
+            "longitude": "9.1739",
+            "post code": "70597",
+            "latitude": "48.7425"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70597",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Möhringen",
+            "longitude": "9.1464",
+            "post code": "70597",
+            "latitude": "48.7258"
+        },
+        {
+            "place name": "Stuttgart Sonnenberg",
+            "longitude": "9.1552",
+            "post code": "70597",
+            "latitude": "48.7446"
+        },
+        {
+            "place name": "Stuttgart Schönberg",
+            "longitude": "9.2001",
+            "post code": "70599",
+            "latitude": "48.7325"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70599",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Steckfeld",
+            "longitude": "9.2014",
+            "post code": "70599",
+            "latitude": "48.7153"
+        },
+        {
+            "place name": "Stuttgart Birkach",
+            "longitude": "9.2108",
+            "post code": "70599",
+            "latitude": "48.7082"
+        },
+        {
+            "place name": "Stuttgart Plieningen",
+            "longitude": "9.2107",
+            "post code": "70599",
+            "latitude": "48.701"
+        },
+        {
+            "place name": "Stuttgart Asemwald",
+            "longitude": "9.1932",
+            "post code": "70599",
+            "latitude": "48.726"
+        },
+        {
+            "place name": "Stuttgart Hohenheim",
+            "longitude": "9.2113",
+            "post code": "70599",
+            "latitude": "48.7118"
+        },
+        {
+            "place name": "Stuttgart Heumaden",
+            "longitude": "9.2376",
+            "post code": "70619",
+            "latitude": "48.7463"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70619",
+            "latitude": "48.7667"
+        },
+        {
+            "place name": "Stuttgart Lederberg",
+            "longitude": "9.243",
+            "post code": "70619",
+            "latitude": "48.7532"
+        },
+        {
+            "place name": "Stuttgart Sillenbuch",
+            "longitude": "9.2074",
+            "post code": "70619",
+            "latitude": "48.7474"
+        },
+        {
+            "place name": "Stuttgart Riedenberg",
+            "longitude": "9.2134",
+            "post code": "70619",
+            "latitude": "48.736"
+        },
+        {
+            "place name": "Stuttgart Flughafen",
+            "longitude": "9.2121",
+            "post code": "70629",
+            "latitude": "48.6836"
+        },
+        {
+            "place name": "Stuttgart",
+            "longitude": "9.1833",
+            "post code": "70629",
+            "latitude": "48.7667"
+        }
+    ],
+    "country": "Germany",
+    "place name": "Stuttgart Stuttgart-Mitte",
+    "state": "Baden-Württemberg",
+    "state abbreviation": "BW"
+}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:08 PM</td>
+				<td class='step-details'>
+						Response Code is Sucess - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:08 PM</td>
+				<td class='step-details'>
+						Validated Content Type - application/json
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:08 PM</td>
+				<td class='step-details'>
+						The time taken to fetch the response -718 milliseconds
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:09 PM</td>
+				<td class='step-details'>
+						The Country Code and State Matched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:09 PM</td>
+				<td class='step-details'>
+						Postal Code and place name is Validated Sucessfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>APITest_01 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Launch Browser and verify Success : API_TestCase 02</span>
+						<span class='test-time'>Aug 7, 2023 04:01:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:01:09 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:01:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+818ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						Response Header : 
+Date=Mon, 07 Aug 2023 10:31:10 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+x-cache=hit
+charset=UTF-8
+vary=Accept-Encoding
+CF-Cache-Status=DYNAMIC
+Report-To={"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=D%2F0PFTJk2f%2FEazIzm%2FWAfP0IvqGYteUMdsYVTKPqWMcmnHpFaDFD%2FQzCwN0Pyez3xh6rO0Lqa0XshySHkHSL0imyoeLqf8yzPmkfhfrDbzXAgYVPXsULjObV4Q6nIDzgf7phvA%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL={"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+access-control-allow-origin=*
+Server=cloudflare
+CF-RAY=7f2ed9327da5f2ca-BOM
+Content-Encoding=gzip
+alt-svc=h3=":443"; ma=86400
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						Response Body : 
+{
+    "post code": "90210",
+    "country": "United States",
+    "country abbreviation": "US",
+    "places": [
+        {
+            "place name": "Beverly Hills",
+            "longitude": "-118.4065",
+            "state": "California",
+            "state abbreviation": "CA",
+            "latitude": "34.0901"
+        }
+    ]
+}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						Response Code is Sucess - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						Validated Content Type - application/json
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						The time taken to fetch the response - 386 milliseconds
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						Place name is validated for Country and Postcode
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:10 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>APITest_02 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Launch Browser and verify Success : API_TestCase 02</span>
+						<span class='test-time'>Aug 7, 2023 04:01:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:01:10 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:01:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+861ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						Response Header : 
+Date=Mon, 07 Aug 2023 10:31:11 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+x-cache=hit
+charset=UTF-8
+vary=Accept-Encoding
+CF-Cache-Status=DYNAMIC
+Report-To={"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zpmfb%2BxtNqWzelKLI%2FI0MGAxjugfF%2Bf02fuSjn0hQlopKzM%2B7YK3UYzxJSa6QNL8e9TJvyZ4zYBSt5gLd4JlM7%2F7WlhKo4vKfBIRpnGFoQY2rTCXU4MydR%2FET4IgZxRDY6kjZQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL={"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+access-control-allow-origin=*
+Server=cloudflare
+CF-RAY=7f2ed937ffe0481a-BOM
+Content-Encoding=gzip
+alt-svc=h3=":443"; ma=86400
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						Response Body : 
+{
+    "post code": "12345",
+    "country": "United States",
+    "country abbreviation": "US",
+    "places": [
+        {
+            "place name": "Schenectady",
+            "longitude": "-74.058",
+            "state": "New York",
+            "state abbreviation": "NY",
+            "latitude": "42.8333"
+        }
+    ]
+}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						Response Code is Sucess - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						Validated Content Type - application/json
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						The time taken to fetch the response - 462 milliseconds
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						Place name is validated for Country and Postcode
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:11 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>APITest_02 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Launch Browser and verify Success : API_TestCase 02</span>
+						<span class='test-time'>Aug 7, 2023 04:01:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2023 04:01:11 PM</span>
+	<span class='label end-time'>Aug 7, 2023 04:01:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+808ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						Response Header : 
+Date=Mon, 07 Aug 2023 10:31:12 GMT
+Content-Type=application/json
+Transfer-Encoding=chunked
+Connection=keep-alive
+x-cache=hit
+charset=UTF-8
+vary=Accept-Encoding
+CF-Cache-Status=DYNAMIC
+Report-To={"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=f2LdQkJVmQPhBsf%2BGh%2BPRqA6Ddx6eiKu1SoWjTGzLLwdLB98QlYaQnQ14avph%2FaGDRClCJoz1H5cEJvR4qSI5TciTGv2%2BGnlm04OnvlZmA6ezXIvBmYRi9vikjHCC6S1u%2BLnTw%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL={"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+access-control-allow-origin=*
+Server=cloudflare
+CF-RAY=7f2ed93ceb0f3b3a-BOM
+Content-Encoding=gzip
+alt-svc=h3=":443"; ma=86400
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						Response Body : 
+{
+    "post code": "B2R",
+    "country": "Canada",
+    "country abbreviation": "CA",
+    "places": [
+        {
+            "place name": "Waverley",
+            "longitude": "-63.5144",
+            "state": "Nova Scotia",
+            "state abbreviation": "NS",
+            "latitude": "44.7431"
+        }
+    ]
+}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						Response Code is Sucess - 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						Validated Content Type - application/json
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						The time taken to fetch the response - 396 milliseconds
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						Place name is validated for Country and Postcode
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:01:12 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>APITest_02 Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>7</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Aug 7, 2023 04:00:02 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Aug 7, 2023 04:01:12 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 1m 9s+536ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Environment</td>
+								<td>QA</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Lavannya Mahalingam</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 7,
+				passParent: 6,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Launch Browser and verify Success : TestCase 01":33.269,"Complete Contach Us Form and verify Success : TestCase 02":7.154,"To Validate Country Specific Sogeti LinksTestCase 03":21.72,"Launch Browser and verify Success : API_TestCase 01":2.827,"Launch Browser and verify Success : API_TestCase 02":0.818,"Launch Browser and verify Success : API_TestCase 02":0.861,"Launch Browser and verify Success : API_TestCase 02":0.808
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

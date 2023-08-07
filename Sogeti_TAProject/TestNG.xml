@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Sogeti_TAProject">
+ <!-- Test UI Scenarios-->	
+ <test name="UI_Test01">
+	        <classes>
+       <class name="TestCases.UITest"/>
+     </classes>
+ </test> 
+<!--  Test API Scenarios -->
+<test name="API_Test01">
+        <classes>
+       <class name="TestCases.APITest"/>
+     </classes>
+ </test> 
+</suite>
+<!--  Test  -->	
